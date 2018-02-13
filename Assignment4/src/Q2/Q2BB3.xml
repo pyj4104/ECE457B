@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<PyBrain>
+	<Network class="pybrain.structure.networks.feedforward.FeedForwardNetwork" name="FeedForwardNetwork-17">
+		<name val="'FeedForwardNetwork-17'"/>
+		<Modules>
+			<LinearLayer class="pybrain.structure.modules.linearlayer.LinearLayer" inmodule="True" name="in">
+				<name val="'in'"/>
+				<dim val="1"/>
+			</LinearLayer>
+			<LinearLayer class="pybrain.structure.modules.linearlayer.LinearLayer" name="out" outmodule="True">
+				<name val="'out'"/>
+				<dim val="1"/>
+			</LinearLayer>
+			<BiasUnit class="pybrain.structure.modules.biasunit.BiasUnit" name="bias">
+				<name val="'bias'"/>
+			</BiasUnit>
+			<SigmoidLayer class="pybrain.structure.modules.sigmoidlayer.SigmoidLayer" name="hidden0">
+				<name val="'hidden0'"/>
+				<dim val="3"/>
+			</SigmoidLayer>
+		</Modules>
+		<Connections>
+			<FullConnection class="pybrain.structure.connections.full.FullConnection" name="FullConnection-13">
+				<inmod val="bias"/>
+				<outmod val="out"/>
+				<Parameters>[0.40184954951254676]</Parameters>
+			</FullConnection>
+			<FullConnection class="pybrain.structure.connections.full.FullConnection" name="FullConnection-14">
+				<inmod val="bias"/>
+				<outmod val="hidden0"/>
+				<Parameters>[-1.1018266002342021, -0.74019294849842254, -0.24471153007826418]</Parameters>
+			</FullConnection>
+			<FullConnection class="pybrain.structure.connections.full.FullConnection" name="FullConnection-15">
+				<inmod val="in"/>
+				<outmod val="hidden0"/>
+				<Parameters>[0.17881373607736686, 0.13315297340330512, 0.049709751936014651]</Parameters>
+			</FullConnection>
+			<FullConnection class="pybrain.structure.connections.full.FullConnection" name="FullConnection-16">
+				<inmod val="hidden0"/>
+				<outmod val="out"/>
+				<Parameters>[-1.684870302600062, -0.51269705134046006, 0.84885370481124378]</Parameters>
+			</FullConnection>
+		</Connections>
+	</Network>
+</PyBrain>

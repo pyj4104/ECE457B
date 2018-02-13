@@ -1,0 +1,66 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{newunicodechar}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\include{A.tex}
+
+\title{ECE457B Assignment 2}
+\author{David YeounJun Park \\ Student ID: 20434264}
+\begin{document}
+
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+\section*{Question 1}
+If ANG is PL and VEL is PL, then CNT is NL\\
+\includegraphics[scale=0.5]{plplnl.png}\\
+If ANG is PL and VEL is NL, then CNT is NC\\
+\includegraphics[scale=0.5]{plnlnc.png}\\
+If ANG is NL and VEL is PL, then CNT is NC\\
+\includegraphics[scale=0.5]{nlplnc.png}\\
+If ANG is NL and VEL is NL, then CNT is PL\\
+\includegraphics[scale=0.5]{rest.png}\\
+
+\pagebreak
+
+\section*{Question 2}
+
+Case B, overlapped membership functions, provides more realistic control than case A for several reasons. If the temperature is close to PL, it is desirable to start increasing the cooler. However, as seen in the figure, the case A, where membership functions are not overlapped, does not do so. Therefore, case B seems to provide more realistic control inferences.
+
+\pagebreak
+
+\section*{Question 3}
+
+$\mu_R$(x,y,z) = $max_i(\mu_{Ri} + \alpha_i * \mu_{Ri} (1-\mu_{Ri}))$ \\
+= $max_i(\mu_{Ri} * (1 + \alpha_i * (1-\mu_{Ri}))$
+\\\\
+As can be seen, $\alpha_i$ is the enhancing factor. $0 \le \mu_{Ri} \le 1$, and $0 \le 1-\mu_{Ri} \le 1$. It means that depending on the $\alpha_i$ value, the element's value at changes. If $\alpha_i > 0$, the value of the element i increases. If $\alpha_i < 0$, the value of the element i decreases. As seen in the cases, $\alpha_i$ offers the weight to the rule-based decision making process. if $\alpha_i > 0$, such decision will be mare likely to be chosen at i, for the decision process finds the max. if $\alpha_i < 0$, the decision is less likely to be chosen, for the value at i decreases.
+
+\pagebreak
+
+\section*{Question 4}
+
+\subsection*{I)}
+\subparagraph*{(a)}
+Servo control of a single axis positioning table with a permanent magnet DC motor is a linear system. It is recommended to use Sugeno fuzzy model because it is fairly simple system with one control variable.
+\subparagraph*{(b)}
+Active control of a vehicle suspension system is multivariable linear system. Sugeno model can handle multivariable linear system. It is recommended to use Sugeno model, since the output can be modelled.
+\subparagraph*{(c)}
+Control of a rotary cement kiln is nonlinear and complex system that is also difficult to model. Since it is non-linear and hard to model, Sugeno model is not recommended. In this case, Mamdani fuzzy model works fine, because it outputs the state.
+
+\subsection*{II)}
+\includegraphics[scale=0.2]{4II.png}\\
+The crisp value of control action is 72.7gal/min after centeroid calculation. It is both RD and MN. It is sustainable, for the fuel usage is not that great.
+
+\pagebreak
+
+\section*{Question 5}
+Please refer to the next page.
+\includepdf[]{5.pdf}
+
+\pagebreak
+
+
+\end{document}

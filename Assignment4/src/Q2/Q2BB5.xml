@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<PyBrain>
+	<Network class="pybrain.structure.networks.feedforward.FeedForwardNetwork" name="FeedForwardNetwork-17">
+		<name val="'FeedForwardNetwork-17'"/>
+		<Modules>
+			<LinearLayer class="pybrain.structure.modules.linearlayer.LinearLayer" inmodule="True" name="in">
+				<name val="'in'"/>
+				<dim val="1"/>
+			</LinearLayer>
+			<LinearLayer class="pybrain.structure.modules.linearlayer.LinearLayer" name="out" outmodule="True">
+				<name val="'out'"/>
+				<dim val="1"/>
+			</LinearLayer>
+			<BiasUnit class="pybrain.structure.modules.biasunit.BiasUnit" name="bias">
+				<name val="'bias'"/>
+			</BiasUnit>
+			<SigmoidLayer class="pybrain.structure.modules.sigmoidlayer.SigmoidLayer" name="hidden0">
+				<name val="'hidden0'"/>
+				<dim val="5"/>
+			</SigmoidLayer>
+		</Modules>
+		<Connections>
+			<FullConnection class="pybrain.structure.connections.full.FullConnection" name="FullConnection-13">
+				<inmod val="bias"/>
+				<outmod val="out"/>
+				<Parameters>[-0.22628116431381931]</Parameters>
+			</FullConnection>
+			<FullConnection class="pybrain.structure.connections.full.FullConnection" name="FullConnection-14">
+				<inmod val="bias"/>
+				<outmod val="hidden0"/>
+				<Parameters>[0.87997057047949168, 0.85725734188149383, 0.60056762310235745, 0.15097276230532727, -0.14143207923111945]</Parameters>
+			</FullConnection>
+			<FullConnection class="pybrain.structure.connections.full.FullConnection" name="FullConnection-15">
+				<inmod val="in"/>
+				<outmod val="hidden0"/>
+				<Parameters>[-0.578308342266449, -0.83154285683202811, -0.3459899088128337, 0.22555823868337935, 0.17433484299657773]</Parameters>
+			</FullConnection>
+			<FullConnection class="pybrain.structure.connections.full.FullConnection" name="FullConnection-16">
+				<inmod val="hidden0"/>
+				<outmod val="out"/>
+				<Parameters>[-0.25483406904002748, 0.83670635055863585, -1.2029884461063713, 0.67063327268476891, 0.68752139400211598]</Parameters>
+			</FullConnection>
+		</Connections>
+	</Network>
+</PyBrain>
